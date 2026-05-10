@@ -135,4 +135,4 @@ This project is part of **Assignment 03 — Google NotebookLM RAG**.
 Built for educational purposes.
 
 ---
-*Created with ❤️ by Antigravity AI for notharshagithub*
+*Created with ❤️ by notharshagithub*
