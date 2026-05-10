@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NotebookLM Clone | RAG Powered AI</title>
+    <meta name="description" content="An intelligent document conversation tool powered by Gemini RAG pipeline." />
+  </head>
+  <body>
+    <div id="app">
+      <aside class="sidebar">
+        <div class="logo">
+          <i data-lucide="book-open"></i>
+          <span>NotebookLM</span>
+        </div>
+        
+        <div class="upload-section">
+          <div id="upload-area" class="upload-area">
+            <i data-lucide="upload-cloud"></i>
+            <h3>Upload Document</h3>
+            <p>PDF or Plain Text (max 10MB)</p>
+            <input type="file" id="file-input" hidden accept=".pdf,.txt" />
+          </div>
+
+          <div id="doc-info" class="doc-info">
+            <p><strong>Active Document:</strong></p>
+            <p id="file-name" style="color: var(--accent-color); margin-top: 5px;"></p>
+            <p id="chunk-info" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 5px;"></p>
+          </div>
+        </div>
+
+        <div class="footer" style="margin-top: auto; font-size: 0.75rem; color: var(--text-secondary);">
+          <p>Powered by DeepSeek & OpenRouter</p>
+          <p>Client-side RAG Pipeline</p>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <div id="chat-container" class="chat-container">
+          <!-- Welcome Message -->
+          <div class="message ai">
+            Hello! I'm your document assistant. Upload a PDF or Text file in the sidebar, and I'll help you extract insights from it.
+          </div>
+        </div>
+
+        <div class="input-area">
+          <form id="chat-form" class="input-wrapper">
+            <input type="text" id="user-input" placeholder="Ask a question about your document..." autocomplete="off" disabled />
+            <button type="submit" id="send-btn" class="send-btn" disabled>
+              <i data-lucide="send"></i>
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
